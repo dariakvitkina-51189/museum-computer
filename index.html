@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Computer Museum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-controls">
+        <button id="theme-toggle" class="control-btn" title="Toggle Accent Style">⚡ Amber Accent</button>
+        <button id="random-exhibit" class="control-btn" title="Jump to Random Exhibit">🎲 Random Exhibit</button>
+        <button id="audio-toggle" class="control-btn" title="Toggle Ambient Sound">🔊 Ambient Vibe</button>
+    </div>
+    
+    <h1>Computer Museum</h1>
+    <p>Virtual Museum of Computing History</p>
+    
+    <!-- Статистика музея -->
+    <div class="museum-stats">
+        <div class="stat-item">
+            <span class="stat-num" data-target="5">0</span>
+            <span class="stat-label">Halls</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num" data-target="80">0</span>
+            <span class="stat-label">+ Years History</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num" data-target="5">0</span>
+            <span class="stat-label">Generations</span>
+        </div>
+    </div>
+
+    <!-- Поиск по экспонатам -->
+    <div class="search-container">
+        <input type="text" id="museum-search" placeholder="Search exhibits, years, or technologies (e.g. 1945, AI, ENIAC)...">
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#hall1">Hall I</a>
+    <a href="#hall2">Hall II</a>
+    <a href="#hall3">Hall III</a>
+    <a href="#hall4">Hall IV</a>
+    <a href="#hall5">Hall V</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#facts">Facts</a>
+    <a href="#future">Future</a>
+    <a href="#sources">Sources</a>
+</nav>
+
+<main>
+    <!-- Hall 1 -->
+    <section id="hall1" class="hall">
+        <h2>First Generation — Vacuum Tubes</h2>
+        <p><strong>Years:</strong> 1940s – 1950s</p>
+        <p><strong>Main Technology:</strong> Vacuum tubes</p>
+        <p><strong>Characteristics:</strong> Massive installations, high energy consumption, frequent hardware failures.</p>
+        
+        <div class="image-container">
+            <img src="hall1-vacuum-tubes.jpg" alt="Vacuum tubes computer museum exhibit">
+            <p class="image-caption">Exhibition of early vacuum tube computing machines</p>
+        </div>
+        <div class="exhibit" data-exhibit-id="eniac">
+            <button class="fav-btn" title="Bookmark exhibit">★</button>
+            <h3>Exhibit: ENIAC</h3>
+            <p><strong>Name:</strong> ENIAC (Electronic Numerical Integrator and Computer)</p>
+            <p><strong>Year:</strong> 1945</p>
+            <p><strong>Generation:</strong> First</p>
+            <p><strong>Technology:</strong> Vacuum tubes</p>
+            <p><strong>Purpose:</strong> Artillery firing tables calculation.</p>
+            <p><strong>Fun Fact:</strong> It weighed 30 tons and occupied an entire hall.</p>
+            <p class="desc">ENIAC was one of the earliest general-purpose electronic computers. It used thousands of vacuum tubes and laid the foundation for modern digital computing.</p>
+        </div>
+    </section>
+
+    <!-- Hall 2 -->
+    <section id="hall2" class="hall">
+        <h2>Second Generation — Transistors</h2>
+        <p><strong>Years:</strong> 1950s – 1960s</p>
+        <p><strong>Main Technology:</strong> Transistors</p>
+        <p><strong>Characteristics:</strong> Reduced size, increased reliability, lower energy consumption.</p>
+        
+        <div class="image-container">
+            <img src="hall2-transistors.jpg" alt="Transistor computer exhibit">
+            <p class="image-caption">Second-generation transistor mainframe</p>
+        </div>
+        <div class="exhibit" data-exhibit-id="ibm7090">
+            <button class="fav-btn" title="Bookmark exhibit">★</button>
+            <h3>Exhibit: IBM 7090</h3>
+            <p><strong>Name:</strong> IBM 7090</p>
+            <p><strong>Year:</strong> 1959</p>
+            <p><strong>Generation:</strong> Second</p>
+            <p><strong>Technology:</strong> Transistors</p>
+            <p><strong>Purpose:</strong> Scientific and governmental research.</p>
+            <p><strong>Fun Fact:</strong> Used by NASA to support space programs.</p>
+            <p class="desc">Replacing fragile vacuum tubes with solid-state transistors revolutionized computer architecture, making systems significantly faster and more stable.</p>
+        </div>
+    </section>
+
+    <!-- Hall 3 -->
+    <section id="hall3" class="hall">
+        <h2>Third Generation — Integrated Circuits</h2>
+        <p><strong>Years:</strong> 1960s – 1970s</p>
+        <p><strong>Main Technology:</strong> Integrated Circuits (ICs)</p>
+        <p><strong>Characteristics:</strong> Miniaturization of components, silicon chips, commercial availability.</p>
+        
+        <div class="image-container">
+            <img src="hall3-integrated-circuits.jpg" alt="Integrated circuits exhibit">
+            <p class="image-caption">Early integrated circuits and silicon chips</p>
+        </div>
+        <div class="exhibit" data-exhibit-id="ibm360">
+            <button class="fav-btn" title="Bookmark exhibit">★</button>
+            <h3>Exhibit: IBM System/360</h3>
+            <p><strong>Name:</strong> IBM System/360</p>
+            <p><strong>Year:</strong> 1964</p>
+            <p><strong>Generation:</strong> Third</p>
+            <p><strong>Technology:</strong> Integrated Circuits</p>
+            <p><strong>Purpose:</strong> Universal business and scientific computing.</p>
+            <p><strong>Fun Fact:</strong> Established compatibility across different computer models.</p>
+            <p class="desc">Integrated circuits allowed developers to pack thousands of components onto a tiny silicon wafer, bridging the gap between massive mainframes and smaller business systems.</p>
+        </div>
+    </section>
+
+    <!-- Hall 4 -->
+    <section id="hall4" class="hall">
+        <h2>Fourth Generation — Microprocessors and PCs</h2>
+        <p><strong>Years:</strong> 1970s – Present</p>
+        <p><strong>Main Technology:</strong> Microprocessors</p>
+        <p><strong>Characteristics:</strong> Central Processing Unit on a single chip, emergence of personal computers.</p>
+        
+        <div class="image-container">
+            <img src="hall4-microprocessors.jpg" alt="Personal computers museum exhibit">
+            <p class="image-caption">The era of personal home computers</p>
+        </div>
+        <div class="exhibit" data-exhibit-id="apple2">
+            <button class="fav-btn" title="Bookmark exhibit">★</button>
+            <h3>Exhibit: Apple II</h3>
+            <p><strong>Name:</strong> Apple II</p>
+            <p><strong>Year:</strong> 1977</p>
+            <p><strong>Generation:</strong> Fourth</p>
+            <p><strong>Technology:</strong> Microprocessor</p>
+            <p><strong>Purpose:</strong> Home computing and education.</p>
+            <p><strong>Fun Fact:</strong> Featured built-in graphics and keyboard design.</p>
+            <p class="desc">The microchip brought computers out of secure research facilities and directly into homes, completely altering daily human routines and work culture.</p>
+        </div>
+    </section>
+
+    <!-- Hall 5 -->
+    <section id="hall5" class="hall">
+        <h2>Fifth Generation — Artificial Intelligence</h2>
+        <p><strong>Years:</strong> Present – Future</p>
+        <p><strong>Main Technology:</strong> AI & Neural Networks</p>
+        <p><strong>Characteristics:</strong> Parallel processing, cognitive computing, cloud connectivity.</p>
+        
+        <div class="image-container">
+            <img src="hall5-ai-modern.jpg" alt="Modern AI and quantum concepts">
+            <p class="image-caption">Conceptual representation of modern neural networks</p>
+        </div>
+        <div class="exhibit" data-exhibit-id="ai-systems">
+            <button class="fav-btn" title="Bookmark exhibit">★</button>
+            <h3>Exhibit: Modern AI Systems</h3>
+            <p><strong>Name:</strong> Generative AI & Neural Processors</p>
+            <p><strong>Year:</strong> 2020s</p>
+            <p><strong>Generation:</strong> Fifth</p>
+            <p><strong>Technology:</strong> Deep Learning / Quantum-ready</p>
+            <p><strong>Purpose:</strong> Autonomous text generation, data analysis, visual processing.</p>
+            <p><strong>Fun Fact:</strong> Modern smartphones outperform old laboratory supercomputers.</p>
+            <p class="desc">Artificial intelligence transforms hardware from simple calculators into autonomous thinking assistants capable of natural language processing and creative tasks.</p>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="hall">
+        <h2>Development Timeline</h2>
+        <div class="timeline-box">
+            <div class="timeline-step"><strong>1940s</strong> — First Generation (Vacuum Tubes, ENIAC)</div>
+            <div class="timeline-step"><strong>1950s-1960s</strong> — Second Generation (Transistors)</div>
+            <div class="timeline-step"><strong>1960s-1970s</strong> — Third Generation (Integrated Circuits)</div>
+            <div class="timeline-step"><strong>1970s–Present</strong> — Fourth Generation (Microprocessors and PCs)</div>
+            <div class="timeline-step"><strong>Modern Era</strong> — Fifth Generation (Artificial Intelligence)</div>
+            <div class="timeline-step"><strong>Future (2050)</strong> — Quantum Computing and Neural Interfaces</div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="hall">
+        <h2>Interactive Museum Quiz</h2>
+        <p>Test your knowledge about computing history!</p>
+        
+        <div class="quiz-card" id="quiz-container">
+            <div id="quiz-question" class="quiz-question">Loading question...</div>
+            <div id="quiz-options" class="quiz-options"></div>
+            <button id="quiz-next" class="control-btn" style="margin-top: 20px; display: none;">Next Question</button>
+            <div id="quiz-result" class="quiz-result"></div>
+        </div>
+    </section>
+
+    <!-- Facts -->
+    <section id="facts" class="hall">
+        <h2>Interesting Facts</h2>
+        <ul>
+            <li>💡 Early computers occupied entire floors of buildings and required teams of engineers.</li>
+            <li>💡 The term "debugging" originated from a real moth stuck in a computer relay.</li>
+            <li>💡 The processing power of a modern smartwatch is higher than the Apollo spacecraft's onboard computer.</li>
+            <li>💡 The invention of the silicon chip reduced component sizes by millions of times.</li>
+        </ul>
+    </section>
+
+    <!-- Future -->
+    <section id="future" class="hall">
+        <h2>Future of Computing (2050)</h2>
+        <p>By 2050, computing systems will become an invisible part of the environment. Quantum computers will solve problems in seconds that currently take years. Brain-computer neural interfaces will allow information to be controlled by the power of thought, completely changing the familiar format of human-technology interaction.</p>
+    </section>
+
+    <!-- Sources -->
+    <section id="sources" class="hall">
+        <h2>References</h2>
+        <ul>
+            <li>📖 <a href="https://www.computerhistory.org" target="_blank" style="color: var(--text-main);">Computer History Museum (Official Archive)</a> — historical data on computer generations and architecture.</li>
+            <li>📖 <a href="https://www.britannica.com/technology/computer" target="_blank" style="color: var(--text-main);">Encyclopædia Britannica (History of Computing)</a> — technical specifications of ENIAC and IBM.</li>
+            <li>📖 <a href="https://spectrum.ieee.org" target="_blank" style="color: var(--text-main);">IEEE Spectrum</a> — materials on the development of microprocessors and quantum computing.</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>Virtual Computer Museum &copy; 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
